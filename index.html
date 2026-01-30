@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local-Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛒 Daily-Mart</h1>
+        <p>Daily Use Items</p>
+    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProduct()">
+</header>
+
+<section class="products" id="productList">
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\brush.jpg">
+        <h2>Toothbrush</h2>
+        <span>₹50</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\soap.jpg">
+        <h2>Soap</h2>
+        <span>₹30</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\notebook.jpg">
+        <h2>Notebook</h2>
+        <span>₹80</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\bottle.jpg">
+        <h2>Water Bottle</h2>
+        <span>₹150</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\facewash.jpg">
+        <h2>Face Wash</h2>
+        <span>₹120</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\shampo.jpg">
+        <h2>Shampoo</h2>
+        <span>₹180</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\handsenitazier.jpg">
+        <h2>Hand Sanitizer</h2>
+        <span>₹60</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\pen.jpg">
+        <h2>Pen</h2>
+        <span>₹10</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\towel.jpg">
+        <h2>Towel</h2>
+        <span>₹250</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="D:\Downloads\index.html\JavaScript\deterzent.jpg">
+        <h2>Detergent</h2>
+        <span>₹220</span>
+        <button>Add to Cart</button>
+    </div>
+
+</section>
+
+<script>
+function searchProduct() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+        cards[i].style.display = title.includes(input) ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
